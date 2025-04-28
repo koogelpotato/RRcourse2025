@@ -1,0 +1,3 @@
+# The Sopranos
+## Main
+**The Sopranos** is an American crime drama television series created by David Chase. The series follows Tony Soprano (James Gandolfini), a New Jersey *Mafia* boss who suffers from panic attacks. He reluctantly begins seeing a psychiatrist, Dr. Melfi (Lorraine Bracco), who encourages him to open up about his difficulties balancing his family life with his criminal life. Other important characters include Tony's family, *Mafia* colleagues, and rivals, most notably his wife Carmela (Edie Falco) and his protégé and distant cousin Christopher Moltisanti (Michael Imperioli).  
