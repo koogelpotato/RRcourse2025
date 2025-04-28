@@ -12,3 +12,5 @@
 | Season 4 | 10.95 million (highest avg) |
 | Season 5 | 9.8 million |
 | Season 6 | 8.25 million |
+## Reason for season 4 highest views
+I think Season Four was the culmination of everything Chase wanted to do with the show. It was the perfect balance of family life and mafia life while feeling a lot more mature than the first 3 seasons. I think they really hit the "style" they wanted. 
