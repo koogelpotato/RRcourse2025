@@ -1,0 +1,85 @@
+---
+title: "The Sopranos: Viewership Analysis"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    theme: cosmo
+    code-fold: true
+    code-summary: "Show the code"
+    number-sections: true
+    echo: false
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+  docx:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    page-layout: article
+    include-in-header:
+      text: "Running head: THE SOPRANOS"
+    include-in-footer:
+      text: "Page \\thepage"
+    df-print: kable
+engine: jupyter
+---
+```{python}
+#| tags: [parameters]
+
+season = "Season 2"
+```
+```{python}
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from IPython.display import Markdown, display
+
+df = pd.read_csv("sopranos_season_data.csv")
+
+row = df[df["Season"] == season].iloc[0]
+
+avg_views = row["Average_Views"]
+highlight = row["Highlight"]
+description = row["Description"]
+
+```
+
+## Season overview:
+```{python}
+display(Markdown(f"""
+### {season}
+
+**Average Viewership:** {avg_views} million  
+**Highlight:** {highlight}  
+
+> {description}
+"""))
+
+```
+
+![Show logo](Sopranos_titlescreen.png)
+
+## Viewership chart
+
+```{python}
+plt.figure(figsize=(10, 6))
+sns.barplot(data=df, x="Season", y="Average_Views", palette="magma")
+
+# Highlight the current season
+highlight_idx = df.index[df["Season"] == season].tolist()[0]
+bar = plt.gca().patches[highlight_idx]
+bar.set_edgecolor("black")
+bar.set_linewidth(2)
+
+plt.title("Average Viewership by Season")
+plt.ylabel("Average Viewers (millions)")
+plt.xlabel("Season")
+plt.xticks(rotation=45)
+plt.grid(axis="y", linestyle="--", alpha=0.5)
+plt.tight_layout()
+plt.show()
+```
+
